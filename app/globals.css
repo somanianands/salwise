@@ -5,22 +5,152 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif !important;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-poppins), system-ui, -apple-system, sans-serif !important;
+}
+
+/* Custom Prose Styling for Markdown Content */
+.prose {
+  color: rgb(31, 41, 55);
+  max-width: none;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: rgb(31, 41, 55);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  color: rgb(55, 65, 81);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.prose li {
+  color: rgb(55, 65, 81);
+  line-height: 1.75;
+  margin: 0.5rem 0;
+}
+
+.prose li > p {
+  margin: 0;
+}
+
+.prose a {
+  color: rgb(37, 99, 235);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.prose a:hover {
+  color: rgb(29, 78, 216);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgb(209, 213, 219);
+  margin: 1.5rem 0;
+}
+
+.prose thead {
+  background-color: rgb(243, 244, 246);
+}
+
+.prose th {
+  border: 1px solid rgb(209, 213, 219);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
+.prose td {
+  border: 1px solid rgb(209, 213, 219);
+  padding: 0.75rem 1rem;
+  color: rgb(55, 65, 81);
+}
+
+.prose tr:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+.prose blockquote {
+  border-left: 4px solid rgb(59, 130, 246);
+  padding-left: 1rem;
+  font-style: italic;
+  color: rgb(55, 65, 81);
+  margin: 1rem 0;
+}
+
+.prose code {
+  background-color: rgb(243, 244, 246);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: ui-monospace, monospace;
+  color: rgb(31, 41, 55);
+}
+
+.prose pre {
+  background-color: rgb(17, 24, 39);
+  color: rgb(243, 244, 246);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: rgb(243, 244, 246);
 }
